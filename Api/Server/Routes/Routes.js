@@ -1,6 +1,7 @@
 const express = require('express');
 const ControllerUser = require('../Controller/ControllerUser');
 const { login } = require('../Controller/AuthController');
+const { CreateArt } = require('../Controller/ControllerArt');
 const router = express.Router();
 
 router.get('/', (req, res) => res.send('Hello World!'))
@@ -15,7 +16,7 @@ router.get('/UpdateProfile', ControllerUser.updateProfile)
 router.get('/DeleteProfile', ControllerUser.deleteProfile)
 
 //Rotas de artes
-router.get('/CreateArt', (req, res) => res.send('Hello World!'))
+router.post('/CreateArt', CreateArt)
 router.get('/UpdateArt', (req, res) => res.send('Hello World!'))
 router.get('/DeleteArt', (req, res) => res.send('Hello World!'))
 router.get('/ListArt', async (req, res) => {

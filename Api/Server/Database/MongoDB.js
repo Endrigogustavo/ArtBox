@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const connetionBD = () => {
 
-    const Url = "mongodb://localhost:27017/"
+    const Url = "mongodb://localhost:27017/HavenArt"
 
     mongoose.connect(Url, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => {
